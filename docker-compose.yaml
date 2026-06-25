@@ -9,5 +9,5 @@ services:
       - RECEIVER_IP=${RECEIVER_IP}
     volumes:
       - ./config:/cfg:ro
-    command: ros2 launch septentrio_gnss_driver rover.launch.py file_name:=/tmp/cfg/rover.yaml
+    command: ros2 launch septentrio_gnss_driver rover.launch.py path_to_config:=/tmp/cfg/rover.yaml
     restart: unless-stopped
