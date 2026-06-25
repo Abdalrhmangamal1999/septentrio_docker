@@ -1,0 +1,13 @@
+services:
+  septentrio:
+    build: .
+    container_name: septentrio_gnss
+    network_mode: host 
+    environment:
+      - ROS_DOMAIN_ID=${ROS_DOMAIN_ID}
+      - RMW_IMPLEMENTATION=${RMW_IMPLEMENTATION}
+      - RECEIVER_IP=${RECEIVER_IP}
+    volumes:
+      - ./config:/cfg:ro
+    command: ros2 launch septentrio_gnss_driver rover.launch.py file_name:=/tmp/cfg/rover.yaml
+    restart: unless-stopped
