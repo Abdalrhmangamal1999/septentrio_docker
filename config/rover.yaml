@@ -10,8 +10,8 @@ serial:
 configure_rx: true
 
 login:
-  user: ""
-  password: ""
+  user: "wakeb"
+  password: "wakeb"
 
 # --- Receiver type ----------------------------------------------------------
 receiver_type: ins          # AntaRx-Si3 is an INS receiver
@@ -58,7 +58,7 @@ rtk_settings:
 # --- INS spatial config -----------------------------------------------------
 ins_spatial_config:
   imu_orientation:
-    theta_x: 0.0
+    thetChanged file_name:= → path_to_config:=/tmp/cfg/rover.yamla_x: 0.0
     theta_y: 0.0
     theta_z: 0.0
   ant_lever_arm:        # IMU -> main GNSS antenna
